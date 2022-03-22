@@ -42,6 +42,8 @@ h5 {
   gap: 1em;
   align-items: center;
   appearance: none;
+  border: 0;
+  line-height: inherit;
   text-decoration: none;
   border-radius: 2em;
   color: var(--button-text-color);
@@ -51,6 +53,11 @@ h5 {
   font-family: inherit;
   padding: 0.5em 1em;
   transition: background 0.16s linear;
+  margin: 1em 0;
+}
+
+.button.small {
+  font-size: 0.75em;
 }
 
 .button.icon {
@@ -58,8 +65,14 @@ h5 {
 }
 
 .button svg {
+  display: block;
   width: 1em;
   height: 1em;
+}
+
+.button.icon svg {
+  width: 1.25em;
+  height: 1.25em;
 }
 
 .button.ghost {
@@ -160,12 +173,14 @@ h5 {
 
 .header {
   position: sticky;
+  z-index: 2;
   top: 0;
   padding: 0.5em 2em;
   width: 100%;
   height: 8rem;
   display: flex;
   align-items: center;
+  background: white;
   box-shadow: 0px -8px 80px rgba(var(--primary-color-rgb), 0.08);
 }
 
@@ -203,5 +218,102 @@ h5 {
 /* page */
 
 .page {
-  height: 200vh;
+  margin: 5.5em auto;
+  width: calc(100% - 4em);
+  max-width: 102.4rem;
+  display: flex;
+  gap: 4em;
+  align-items: stretch;
+}
+
+.page .articles {
+  flex: 2 1 50%;
+}
+
+.page .aside {
+  flex: 1 1 25%;
+}
+
+/* articles */
+
+.list__article {
+  margin-bottom: 4em;
+}
+.list__article-date {
+  margin: 0;
+}
+.list__article-title {
+  font-size: 2.5em;
+  line-height: 1.12;
+}
+.list__article-link {
+  margin-top: 1em;
+}
+
+.aside {
+}
+
+.aside h1 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.prefooter {
+  background: linear-gradient(180deg, #f8f8f8 0%, #ffffff 100%);
+  padding: 3em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.prefooter .field {
+  max-width: 30em;
+  margin: 1em 0;
+  width: 100%;
+  text-align: left;
+}
+
+.field input {
+  display: block;
+  font: inherit;
+  width: 100%;
+  border-radius: 2em;
+  padding: calc(0.75em - 2px) 1em;
+  outline: none;
+  border: 2px solid rgba(var(--primary-color-rgb), 0.16);
+}
+.field input:focus {
+  border-color: var(--primary-color);
+}
+
+label {
+  margin: 1em 0;
+}
+
+input[type="checkbox"] {
+  margin-right: 1em;
+}
+
+.field span {
+  font-size: 0.75em;
+  padding-left: 1.75em;
+}
+
+.prefooter form {
+  max-width: 40em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer {
+  background: rgb(var(--primary-color-rgb));
+  text-align: center;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 0.75em;
+  padding: 1.25em 0;
+}
+
+.footer p {
+  margin: 0;
 }
