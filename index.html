@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aperture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <section class="hero">
+      <div class="hero__content hero__section">
+        <a href="/" class="hero__logo">
+          <img src="img/picto.svg" alt="" />
+        </a>
+
+        <article class="hero__article">
+          <header>
+            <p class="hero__article-date">23 avril 2022</p>
+            <h1 class="hero__article-title">
+              Lorem ipsum dolor sit amet consectetur
+            </h1>
+          </header>
+
+          <main>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu et sem
+              aliquet tortor, ac purus velit in. Et, potenti augue facilisis
+              adipiscing integer faucibus. At a malesuada placerat metus mattis
+              placerat augue at dignissim. Adipiscing tempor blandit libero
+              quisque ullamcorper.
+            </p>
+
+            <a href="#" class="hero__article-link button">Read more</a>
+          </main>
+        </article>
+
+        <a href="#" class="hero__article-next-link button ghost"
+          >Titre article suivant <i icon-name="chevron-right"></i
+        ></a>
+      </div>
+      <div class="hero__img hero__section">
+        <img src="img/aperture.jpg" />
+      </div>
+    </section>
+
+    <header class="header">
+      <h1>
+        <a href="/">
+          <img src="img/logo.svg" alt="" />
+        </a>
+      </h1>
+
+      <nav class="header__nav">
+        <ul>
+          <li><a class="button ghost" href="/">Accueil</a></li>
+          <li><a class="button ghost" href="about.html">À propos</a></li>
+          <li><a class="button ghost" href="contact.html">Contact</a></li>
+          <li>
+            <a class="button icon ghost" href="#"
+              ><i icon-name="facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a class="button icon ghost" href="#"
+              ><i icon-name="instagram"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page">
+      <div class="articles"></div>
+
+      <aside></aside>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
