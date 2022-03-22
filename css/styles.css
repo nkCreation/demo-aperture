@@ -242,6 +242,13 @@ h5 {
 .list__article-date {
   margin: 0;
 }
+.list__article-next-page {
+  font-weight: bold;
+  text-align: right;
+}
+.list__article-next-link {
+  font-weight: bold;
+}
 .list__article-title {
   font-size: 2.5em;
   line-height: 1.12;
@@ -250,13 +257,13 @@ h5 {
   margin-top: 1em;
 }
 
-.aside {
-}
+/* aside */
 
 .aside h1 {
   font-size: 1.5em;
   margin-top: 0;
 }
+/* prefooter */
 
 .prefooter {
   background: linear-gradient(180deg, #f8f8f8 0%, #ffffff 100%);
@@ -305,6 +312,8 @@ input[type="checkbox"] {
   align-items: center;
   text-align: center;
 }
+
+/* footer */
 
 .footer {
   background: rgb(var(--primary-color-rgb));
