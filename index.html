@@ -11,8 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/slider.css" />
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -56,8 +59,27 @@
           >Titre article suivant <i icon-name="chevron-right"></i
         ></a>
       </div>
-      <div class="hero__img hero__section">
-        <img src="img/aperture.jpg" />
+      <div class="hero__slider hero__section">
+        <div class="slider">
+          <button class="slider__button slider__button--prev button ghost icon">
+            <i icon-name="chevron-left"></i>
+          </button>
+
+          <div class="slider__elements">
+            <div class="slider__element"><img src="img/aperture.jpg" /></div>
+            <div class="slider__element"><img src="img/photo2.jpg" /></div>
+            <div class="slider__element"><img src="img/photo3.jpg" /></div>
+            <div class="slider__element"><img src="img/photo4.jpg" /></div>
+            <div class="slider__element"><img src="img/photo5.jpg" /></div>
+            <div class="slider__element"><img src="img/photo6.jpg" /></div>
+          </div>
+
+          <button class="slider__button slider__button--next button ghost icon">
+            <i icon-name="chevron-right"></i>
+          </button>
+
+          <div class="slider__nav"></div>
+        </div>
       </div>
     </section>
 
@@ -136,6 +158,8 @@
             >Page suivante <i icon-name="chevron-right"></i
           ></a>
         </p>
+
+        <button type="button" id="coucoubutton" class="button">Coucou</button>
       </div>
 
       <aside class="aside">
@@ -176,6 +200,8 @@
     <footer class="footer">
       <p>© Aperture 2022 - Mentions légales</p>
     </footer>
+
+    <script src="./js/slider.js"></script>
 
     <script>
       lucide.createIcons();

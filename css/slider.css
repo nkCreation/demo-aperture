@@ -1,0 +1,100 @@
+.slider {
+  --transition-timing: 0.8s;
+  background: black;
+  position: relative;
+  height: 100%;
+}
+
+.slider__elements {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.slider__element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(1.2);
+  transition: opacity var(--transition-timing) linear,
+    transform var(--transition-timing) linear var(--transition-timing);
+}
+
+.slider__element.is-on {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity var(--transition-timing) linear, transform 10s linear;
+}
+
+.slider__element img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(1);
+}
+
+.slider__nav {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider button {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+.slider__nav button {
+  margin: 1rem 0.2rem;
+  padding: 2rem 0;
+  font-size: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slider__nav button:hover::before {
+  opacity: 0.88;
+}
+
+.slider__nav button::before {
+  content: "";
+  display: block;
+  border-radius: 1rem;
+  width: 2rem;
+  height: 0.4rem;
+  background: currentColor;
+  opacity: 0.48;
+  transition: opacity 0.2s linear, width 0.2s ease-in-out;
+}
+
+.slider__nav button.is-on::before {
+  width: 4rem;
+  opacity: 1;
+}
+
+.slider__button {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+}
+
+.slider__button--prev {
+  left: 0;
+}
+.slider__button--next {
+  right: 0;
+}
